@@ -11,11 +11,11 @@ interface IProps {
 	onDestroy?: () => void
 }
 
-interface Istate {
-	duration: number
-	isShow: boolean
-	isHide: boolean
-}
+// interface Istate {
+// 	duration: number
+// 	isShow: boolean
+// 	isHide: boolean
+// }
 /**
  * 引入notification就添加notificationContainer
  */
@@ -29,7 +29,7 @@ interface Istate {
  * 可复用的  只关注内部的notification component
  */
 function NotificationComponent(props: IProps) {
-	let timer: NodeJS.Timer
+	let timer: number
 	const myRef: React.MutableRefObject<HTMLDivElement | null> = useRef(null)
 	let isClickClose = false
 	const duration = props.duration || 3
@@ -40,7 +40,7 @@ function NotificationComponent(props: IProps) {
 		// 进入动画回调
 		if (e.animationName === 'show') {
 			console.log('显示动画')
-			timer = setTimeout(() => {
+			timer = window.setTimeout(() => {
 				setIsShow(false)
 				setIsHide(true)
 			}, duration * 1000)

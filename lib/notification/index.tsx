@@ -33,7 +33,7 @@ class NotificationComponent extends React.Component<IProps, Istate> {
 		isShow: false,
 		isHide: false
 	}
-	private timer: NodeJS.Timer
+	private timer: number
 	private myRef: React.RefObject<HTMLDivElement> = React.createRef()
 	private eventFn: (e: AnimationEvent) => void
 	private isClickClose = false
@@ -56,7 +56,7 @@ class NotificationComponent extends React.Component<IProps, Istate> {
 			// 进入动画回调
 			if (e.animationName === 'show') {
 				console.log('显示动画')
-				this.timer = setTimeout(() => {
+				this.timer = window.setTimeout(() => {
 					this.setState({
 						isShow: false,
 						isHide: true
@@ -103,7 +103,7 @@ class NotificationComponent extends React.Component<IProps, Istate> {
  */
 function init(props: IProps) {
 	// 拿到当前的notification实例
-	let notification: NotificationComponent
+	// let notification: NotificationComponent
 
 	const ref: React.RefObject<NotificationComponent> = React.createRef()
 
@@ -121,7 +121,7 @@ function init(props: IProps) {
 	// 渲染组件
 	ReactDOM.render(<NotificationComponent {...props} ref={ref} onDestroy={handleDestroy} />, div)
 
-	notification = ref.current as NotificationComponent
+	// notification = ref.current as NotificationComponent
 }
 
 const api = {

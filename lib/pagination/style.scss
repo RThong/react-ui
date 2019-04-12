@@ -1,0 +1,99 @@
+.hui-pagination {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	color: rgba(0, 0, 0, 0.65);
+	font-size: 14px;
+	font-variant: tabular-nums;
+	line-height: 1.5;
+	list-style: none;
+	-webkit-font-feature-settings: 'tnum';
+	font-feature-settings: 'tnum';
+	.hui-pagination-prev,
+	.hui-pagination-next,
+	.hui-pagination-jump-prev,
+	.hui-pagination-jump-next {
+		display: inline-block;
+		min-width: 32px;
+		height: 32px;
+		color: rgba(0, 0, 0, 0.65);
+		font-family: Arial;
+		line-height: 32px;
+		text-align: center;
+		vertical-align: middle;
+		list-style: none;
+		border-radius: 4px;
+		cursor: pointer;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+
+	.hui-pagination-prev,
+	.hui-pagination-jump-prev,
+	.hui-pagination-jump-next {
+		margin-right: 8px;
+	}
+
+	.hui-pagination-prev .hui-pagination-item-link,
+	.hui-pagination-next .hui-pagination-item-link {
+		display: block;
+		height: 100%;
+		font-size: 12px;
+		text-align: center;
+		background-color: #fff;
+		border: 1px solid #d9d9d9;
+		border-radius: 4px;
+		outline: none;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+	.hui-pagination-item {
+		display: inline-block;
+		min-width: 32px;
+		height: 32px;
+		margin-right: 8px;
+		font-family: Arial;
+		line-height: 30px;
+		text-align: center;
+		vertical-align: middle;
+		list-style: none;
+		background-color: #fff;
+		border: 1px solid #d9d9d9;
+		border-radius: 4px;
+		outline: 0;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		a {
+			margin: 0 6px;
+			color: rgba(0, 0, 0, 0.65);
+			-webkit-transition: none;
+			transition: none;
+		}
+	}
+
+	.hui-pagination-item-active {
+		font-weight: 500;
+		background: transparent;
+		border-color: #1890ff;
+		a {
+			border-color: #1890ff;
+		}
+	}
+
+	.hui-pagination-item:focus,
+	.hui-pagination-item:hover,
+	.hui-pagination-prev:hover,
+	.hui-pagination-next:hover {
+		border-color: #1890ff;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+	.hui-pagination-item-active:focus,
+	.hui-pagination-item-active:hover {
+		border-color: #40a9ff;
+	}
+}
