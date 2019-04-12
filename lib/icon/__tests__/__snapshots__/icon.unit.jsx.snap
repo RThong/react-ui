@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`icon 渲染 传入props 1`] = `
+<i
+  className="hong-icon"
+  type="alipay"
+>
+  <svg>
+    <use
+      xlinkHref="#alipay"
+    />
+  </svg>
+</i>
+`;
+
+exports[`icon 渲染 未传入props 1`] = `
+<i
+  className="hong-icon"
+>
+  <svg>
+    <use
+      xlinkHref="#undefined"
+    />
+  </svg>
+</i>
+`;

@@ -1,0 +1,28 @@
+<testsuites name="jest tests" tests="9" failures="0" time="3.616">
+  <testsuite name="button test" errors="0" failures="0" skipped="0" timestamp="2019-04-09T09:25:26" time="1.467" tests="1">
+    <testcase classname="button test 是个div" name="button test 是个div" time="0.013">
+    </testcase>
+  </testsuite>
+  <testsuite name="icon" errors="0" failures="0" skipped="0" timestamp="2019-04-09T09:25:27" time="0.8" tests="3">
+    <testcase classname="icon 渲染 传入props" name="icon 渲染 传入props" time="0.002">
+    </testcase>
+    <testcase classname="icon 渲染 未传入props" name="icon 渲染 未传入props" time="0.001">
+    </testcase>
+    <testcase classname="icon onClick" name="icon onClick" time="0.036">
+    </testcase>
+  </testsuite>
+  <testsuite name="我的第一个测试用例" errors="0" failures="0" skipped="0" timestamp="2019-04-09T09:25:28" time="0.144" tests="1">
+    <testcase classname="我的第一个测试用例 1 等于 1" name="我的第一个测试用例 1 等于 1" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="classnames" errors="0" failures="0" skipped="0" timestamp="2019-04-09T09:25:28" time="0.186" tests="4">
+    <testcase classname="classnames 接收 1 个 className" name="classnames 接收 1 个 className" time="0">
+    </testcase>
+    <testcase classname="classnames 接收 undefined 不出现undefined" name="classnames 接收 undefined 不出现undefined" time="0.001">
+    </testcase>
+    <testcase classname="classnames 接收 各种奇怪的值" name="classnames 接收 各种奇怪的值" time="0">
+    </testcase>
+    <testcase classname="classnames 接收 0 个 参数" name="classnames 接收 0 个 参数" time="0">
+    </testcase>
+  </testsuite>
+</testsuites>

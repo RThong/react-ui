@@ -1,0 +1,89 @@
+.notification-container {
+	position: fixed;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	color: rgba(0, 0, 0, 0.65);
+	font-size: 14px;
+	line-height: 1.5;
+	position: fixed;
+	z-index: 1010;
+	width: 384px;
+	max-width: calc(100vw - 32px);
+	margin-right: 24px;
+	right: 0;
+	top: 24px;
+	.notification-box {
+		position: relative;
+		margin-bottom: 16px;
+		padding: 16px 24px;
+		overflow: hidden;
+		line-height: 1.5;
+		background: #fff;
+		border-radius: 4px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+		transform: translateX(100%);
+		.notification-close {
+			position: absolute;
+			top: 16px;
+			right: 22px;
+			color: rgba(0, 0, 0, 0.45);
+			transition: color 0.3s ease;
+			cursor: pointer;
+			&:hover {
+				color: rgba(0, 0, 0, 0.67);
+			}
+		}
+		.notification-message {
+			display: inline-block;
+			margin-bottom: 8px;
+			color: rgba(0, 0, 0, 0.85);
+			font-size: 16px;
+			line-height: 24px;
+			padding-right: 24px;
+		}
+		.description {
+			font-size: 14px;
+		}
+	}
+}
+
+@keyframes show {
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes hide {
+	0% {
+		max-height: 150px;
+		margin-bottom: 16px;
+		padding-top: 16px;
+		padding-bottom: 16px;
+		transform: translateX(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(0);
+		max-height: 0;
+		margin-bottom: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+		opacity: 0;
+	}
+}
+
+.show {
+	animation-duration: 0.2s;
+	animation-fill-mode: forwards;
+	animation-name: show;
+	animation-play-state: running;
+	animation-timing-function: ease-in-out;
+}
+
+.hide {
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-name: hide;
+	animation-play-state: running;
+	animation-timing-function: ease;
+}

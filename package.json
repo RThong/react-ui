@@ -1,0 +1,83 @@
+{
+	"name": "hui666",
+	"version": "0.0.1",
+	"main": "dist/lib/index",
+	"types": "dist/lib/index",
+	"files": [
+		"dist/**/*"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:RThong/react-ui.git"
+	},
+	"dependencies": {
+		"flat": "^4.1.0"
+	},
+	"peerDependencies": {
+		"@types/prop-types": "^15.5.6",
+		"@types/react": "^16.7.13",
+		"@types/react-dom": "^16.0.11",
+		"prop-types": "^15.5.6",
+		"react": "16.7.0-alpha.2",
+		"react-dom": "16.7.0-alpha.2"
+	},
+	"scripts": {
+		"start": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.dev.js",
+		"build": "rimraf dist && cross-env NODE_ENV=production webpack -p --config ./config/webpack.config.prod.js",
+		"docs": "cross-env NODE_ENV=production webpack -p --config ./config/webpack.config.docs.js",
+		"test": "cross-env NODE_ENV=test jest --config=jest.config.js --runInBand",
+		"ci": "cross-env NODE_ENV=test JEST_JUNIT_OUTPUT=./test-results/jest/results.xml jest --config=jest.config.ci.js",
+		"task": "node ./tasks/index.js"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.2.2",
+		"@babel/preset-env": "^7.2.0",
+		"@reach/router": "^1.2.1",
+		"@types/enzyme": "^3.1.14",
+		"@types/enzyme-adapter-react-16": "^1.0.3",
+		"@types/jest": "^23.3.5",
+		"@types/node": "^10.11.7",
+		"@types/prop-types": "^15.5.6",
+		"@types/reach__router": "^1.2.2",
+		"@types/react": "^16.7.13",
+		"@types/react-dom": "^16.0.11",
+		"@types/react-router-dom": "^4.3.1",
+		"@types/react-test-renderer": "^16.0.3",
+		"@types/webpack-env": "^1.13.6",
+		"awesome-typescript-loader": "^5.2.1",
+		"babel-core": "7.0.0-bridge.0",
+		"babel-jest": "^23.6.0",
+		"babel-loader": "^8.0.4",
+		"babel-preset-react-app": "^6.1.0",
+		"cross-env": "^5.2.0",
+		"css-loader": "^1.0.0",
+		"enzyme": "^3.9.0",
+		"enzyme-adapter-react-16": "^1.12.1",
+		"file-loader": "^2.0.0",
+		"hash-source": "^1.0.1",
+		"html-webpack-plugin": "^3.2.0",
+		"jest": "^23.6.0",
+		"jest-junit": "^5.2.0",
+		"mini-css-extract-plugin": "^0.5.0",
+		"mustache": "^3.0.1",
+		"node-sass": "^4.9.4",
+		"prop-types": "^15.5.6",
+		"react": "16.7.0-alpha.2",
+		"react-dom": "16.7.0-alpha.2",
+		"react-markdown": "^4.0.4",
+		"react-router-dom": "^5.0.0",
+		"react-test-renderer": "16.7.0-alpha.2",
+		"rimraf": "^2.6.3",
+		"sass-loader": "^7.1.0",
+		"style-loader": "^0.23.1",
+		"svg-sprite-loader": "^4.1.3",
+		"ts-jest": "^23.10.4",
+		"tslint": "^5.11.0",
+		"tslint-loader": "^3.5.4",
+		"tslint-react": "^3.6.0",
+		"typescript": "^3.2.2",
+		"webpack": "^4.20.2",
+		"webpack-cli": "^3.1.2",
+		"webpack-dev-server": "^3.1.9"
+	}
+}
