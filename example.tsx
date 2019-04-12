@@ -7,7 +7,7 @@ ReactDOM.render(
 	<div>
 		<Router>
 			<header>
-				<div>hong-ui</div>
+				<div>hong-ui.</div>
 			</header>
 			<div>
 				<aside>
