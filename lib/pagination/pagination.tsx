@@ -16,23 +16,26 @@ const Pagination: React.FunctionComponent<Props> = props => {
 	const [arr, setArr] = useState<number[]>([])
 
 	useEffect(() => {
+		console.log('hook useEffect:', current)
+
 		setArr(
-			Array(pageCount)
-				.fill(undefined)
-				.map((item, index) => index + 1)
-				.filter(page => {
-					if (page === 1 || page === pageCount) {
-						return true
-					} else if (Math.abs(current - page) <= 2) {
-						return true
-					} else {
-						return false
-					}
-				})
-				.reduce((prev: number[], cur: number) => {
-					const last = prev[prev.length - 1]
-					return prev.concat(Math.abs(cur - last) > 1 ? [-1, cur] : [cur])
-				}, [])
+			// Array(pageCount)
+			// 	.fill(undefined)
+			// 	.map((item, index) => index + 1)
+			// 	.filter(page => {
+			// 		if (page === 1 || page === pageCount) {
+			// 			return true
+			// 		} else if (Math.abs(current - page) <= 2) {
+			// 			return true
+			// 		} else {
+			// 			return false
+			// 		}
+			// 	})
+			// 	.reduce((prev: number[], cur: number) => {
+			// 		const last = prev[prev.length - 1]
+			// 		return prev.concat(Math.abs(cur - last) > 1 ? [-1, cur] : [cur])
+			// 	}, [])
+			Math.random() > 0.5 ? [1, 2, 3, 4, 5, 6, 7] : [2, 3, 4, 5, 6, 7, 8]
 		)
 		props.onChange && props.onChange(current)
 	}, [current])
@@ -49,6 +52,7 @@ const Pagination: React.FunctionComponent<Props> = props => {
 			setCurrent(page)
 		}
 	}
+	console.log('hook fun')
 	return (
 		<ul className="hui-pagination">
 			{/* <button onClick={() => current - 1 >= 1 && setCurrent(current - 1)}>←</button> */}
